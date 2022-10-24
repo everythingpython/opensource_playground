@@ -4,6 +4,11 @@ from logging_formatter import getLogger
 logger = getLogger("Fibonacci")
 
 def get_nth_fibo_num(n):
+    """
+      Objective : Should return the nth fibonacci number
+      E.g. If n = 10 
+      get_nth_fibo_num(10) should return 55
+    """
     n = int(n)
     if n == 1:
         return 1
