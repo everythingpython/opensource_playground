@@ -1,0 +1,1 @@
+str_message = "Enter 'push <n>' or 'pop' or '0' to exit."
