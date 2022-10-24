@@ -1,5 +1,5 @@
 from logging_formatter import getLogger
-import strings
+from strings import *
 
 logger = getLogger("Fibonacci")
 
@@ -34,22 +34,22 @@ try:
     stack_obj = Stack()
     method =  None
 
-    while method != "0":
-        inputs = input(strings.str_message+"\n").split()
+    while method != str_zero:
+        inputs = input(str_message+"\n").split()
         if len(inputs) < 1:
             logger.error(f"Empty input.\n")
         else:
             method = inputs[0]
-            if method == "push":
+            if method == str_push:
                 if len(inputs) < 2:
                     logger.warning(f"Missing element to push to stack. Enter : <push> <n>\n")
                 else:
                     to_be_pushed = inputs[1]
                     element = int(to_be_pushed) if to_be_pushed.isnumeric() else to_be_pushed
                     stack_obj.push(element)
-            elif method == "pop":
+            elif method == str_pop:
                 stack_obj.pop()
-            elif method == "0":
+            elif method == str_zero:
                 logger.info(f"Final state of stack = {stack_obj.stack}\n")
                 exit
             else:
